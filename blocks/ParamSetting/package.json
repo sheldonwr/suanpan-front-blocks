@@ -1,0 +1,14 @@
+{
+  "name": "param-setting",
+  "version": "0.0.1",
+  "description": "参数配置面板,数据结构与算盘web右面板一致",
+  "author": "zongjie",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^4.0.3",
+    "dva": "^2.4.1",
+    "lodash": "^4.17.15",
+    "react": "^16.13.0",
+    "redux": "^4.0.5"
+  }
+}
