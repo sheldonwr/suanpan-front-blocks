@@ -4,7 +4,7 @@ import { RouterTypes } from 'umi';
 import { GlobalModelState } from './global';
 import { DefaultSettings as SettingModelState } from '../../config/defaultSettings';
 
-import { CalibrationModelState } from '../../blocks/ParamSetting'
+import { CalibrationModelState } from '../../blocks/ParamSetting/src'
 
 export { GlobalModelState, SettingModelState };
 

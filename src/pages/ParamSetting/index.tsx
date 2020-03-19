@@ -1,5 +1,5 @@
 import React from 'react';
-import ParamSetting from '../../../blocks/ParamSetting';
+import ParamSetting from '../../../blocks/ParamSetting/src';
 import { currentDataValue, parameterTypes } from './mock';
 
 const ParameterSetting: React.FC = () => (
