@@ -4,6 +4,7 @@
   "description": "参数配置面板,数据结构与算盘web右面板一致",
   "author": "zongjie",
   "license": "ISC",
+  "main": "index.ts",
   "dependencies": {
     "antd": "^3.23.6",
     "dva": "^2.4.1",
