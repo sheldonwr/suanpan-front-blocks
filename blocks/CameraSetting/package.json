@@ -1,0 +1,19 @@
+{
+  "name": "CameraSetting",
+  "version": "0.0.1",
+  "description": "相机参数配置",
+  "author": "zongjie",
+  "license": "ISC",
+  "main": "src/index.ts",
+  "dependencies": {
+    "antd": "^3.23.6",
+    "classnames": "^2.2.6",
+    "dva": "^2.4.1",
+    "lodash": "^4.17.15",
+    "react": "^16.13.0",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.10"
+  }
+}

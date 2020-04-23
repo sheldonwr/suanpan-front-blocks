@@ -5,6 +5,7 @@ import { GlobalModelState } from './global';
 import { DefaultSettings as SettingModelState } from '../../config/defaultSettings';
 
 import { CalibrationModelState } from '../../blocks/ParamSetting/src'
+import { CameraModelState } from '../../blocks/CameraSetting/src/models/camerasetting';
 
 export { GlobalModelState, SettingModelState };
 
@@ -23,6 +24,7 @@ export interface Loading {
 export interface ConnectState {
   loading: Loading;
   calibration: CalibrationModelState;
+  camera: CameraModelState;
 }
 
 export interface Route extends MenuDataItem {
