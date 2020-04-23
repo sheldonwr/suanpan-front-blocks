@@ -1,7 +1,7 @@
 import { Reducer } from 'redux';
 import { Effect } from 'dva';
 
-import { 
+import {
   supportParameters,
   getTempList,
   getTempDetail,
@@ -40,7 +40,7 @@ export interface CalibrationModelType {
   namespace: 'calibration';
   state: CalibrationModelState;
   effects: {
-    supportParameters : Effect;
+    supportParameters: Effect;
     getTempList: Effect;
     getTempDetail: Effect;
     createTemplate: Effect;
@@ -72,7 +72,7 @@ const CalibrationModel: CalibrationModelType = {
 
   effects: {
 
-    *supportParameters({ payload,callback }, { call, put }) {
+    *supportParameters(_, { call, put }) {
       const data = yield call(supportParameters);
       yield put({
         type: 'saveParameters',
@@ -80,73 +80,73 @@ const CalibrationModel: CalibrationModelType = {
       });
     },
 
-    *getTempList({ payload,callback }, { call, put }) {
+    *getTempList({ callback }, { call, put }) {
       const data = yield call(getTempList);
       yield put({
         type: 'saveTempList',
         payload: data
       });
-      if(callback) callback(data)
+      if (callback) callback(data)
     },
 
-    *getTempDetail({ payload,callback }, { call, put }) {
-      const data = yield call(getTempDetail,payload);
-      if(callback) callback(data)
+    *getTempDetail({ payload, callback }, { call }) {
+      const data = yield call(getTempDetail, payload);
+      if (callback) callback(data)
     },
 
-    *createTemplate({ payload,callback }, { call, put }) {
-      const data = yield call(createTemplate,payload);
-      if(callback) callback(data)
+    *createTemplate({ payload, callback }, { call }) {
+      const data = yield call(createTemplate, payload);
+      if (callback) callback(data)
     },
 
-    *deleteTemplates({ payload,callback }, { call, put }) {
-      const data = yield call(deleteTemplates,payload);
-      if(callback) callback(data)
+    *deleteTemplates({ payload, callback }, { call }) {
+      const data = yield call(deleteTemplates, payload);
+      if (callback) callback(data)
     },
 
-    *trainImage({ payload,callback }, { call, put }) {
-      const data = yield call(trainImage,payload);
-      if(callback) callback(data)
+    *trainImage({ payload, callback }, { call }) {
+      const data = yield call(trainImage, payload);
+      if (callback) callback(data)
     },
 
-    *roiSet({ payload,callback }, { call, put }) {
-      const data = yield call(roiSet,payload);
-      if(callback) callback(data)
+    *roiSet({ payload, callback }, { call }) {
+      const data = yield call(roiSet, payload);
+      if (callback) callback(data)
     },
 
-    *argsUpdate({ payload,callback }, { call, put }) {
-      const data = yield call(argsUpdate,payload);
-      if(callback) callback(data)
+    *argsUpdate({ payload, callback }, { call }) {
+      const data = yield call(argsUpdate, payload);
+      if (callback) callback(data)
     },
 
-    *train({ payload,callback }, { call, put }) {
-      const data = yield call(train,payload);
-      if(callback) callback(data)
+    *train({ payload, callback }, { call }) {
+      const data = yield call(train, payload);
+      if (callback) callback(data)
     },
 
-    *updateFeatures({ payload,callback }, { call, put }) {
-      const data = yield call(updateFeatures,payload);
-      if(callback) callback(data)
+    *updateFeatures({ payload, callback }, { call }) {
+      const data = yield call(updateFeatures, payload);
+      if (callback) callback(data)
     },
 
-    *updateCoordinate({ payload,callback }, { call, put }) {
-      const data = yield call(updateCoordinate,payload);
-      if(callback) callback(data)
+    *updateCoordinate({ payload, callback }, { call }) {
+      const data = yield call(updateCoordinate, payload);
+      if (callback) callback(data)
     },
 
-    *testImage({ payload,callback }, { call, put }) {
-      const data = yield call(testImage,payload);
-      if(callback) callback(data)
+    *testImage({ payload, callback }, { call }) {
+      const data = yield call(testImage, payload);
+      if (callback) callback(data)
     },
 
-    *test({ payload,callback }, { call, put }) {
-      const data = yield call(test,payload);
-      if(callback) callback(data)
+    *test({ payload, callback }, { call }) {
+      const data = yield call(test, payload);
+      if (callback) callback(data)
     },
 
-    *submit({ payload,callback }, { call, put }) {
-      const data = yield call(submit,payload);
-      if(callback) callback(data)
+    *submit({ payload, callback }, { call }) {
+      const data = yield call(submit, payload);
+      if (callback) callback(data)
     }
   },
 

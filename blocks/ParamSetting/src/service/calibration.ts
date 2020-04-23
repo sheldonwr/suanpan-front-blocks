@@ -1,15 +1,15 @@
 import request from '@/utils/request';
 
-export async function supportParameters(data: any): Promise<any> {
+export async function supportParameters(): Promise<any> {
   return request('support_parameters');
 }
 
-export async function getTempList(data: any): Promise<any> {
+export async function getTempList(): Promise<any> {
   return request('get_templates');
 }
 
 export async function getTempDetail(data: any): Promise<any> {
-  return request('template/args/get/' + data.template_name, { 
+  return request('template/args/get', { 
       method: 'post',
       data
     }
@@ -31,7 +31,7 @@ export async function deleteTemplates (data: any): Promise<any> {
 }
 
 export async function trainImage (data: any): Promise<any> {
-  return request('train_image', {
+  return request('set_train_image ', {
     method: 'post',
     data
   });
@@ -43,6 +43,13 @@ export async function roiSet (data: any): Promise<any> {
     data
   });
 }
+
+// export async function setTrainImage (data: any): Promise<any> {
+//   return request('set_train_image ', {
+//     method: 'post',
+//     data
+//   });
+// }
 
 export async function argsUpdate (data: any): Promise<any> {
   return request('functions/args/update', {
@@ -67,13 +74,6 @@ export async function updateFeatures (data: any): Promise<any> {
 
 export async function updateCoordinate (data: any): Promise<any> {
   return request('coordinate/update', {
-    method: 'post',
-    data
-  });
-}
-
-export async function testImage (data: any): Promise<any> {
-  return request('test_image', {
     method: 'post',
     data
   });
