@@ -24,7 +24,7 @@ export interface Loading {
 export interface ConnectState {
   loading: Loading;
   calibration: CalibrationModelState;
-  camera: CameraModelState;
+  camerasetting: CameraModelState;
 }
 
 export interface Route extends MenuDataItem {

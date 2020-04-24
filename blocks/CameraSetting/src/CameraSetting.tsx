@@ -209,6 +209,6 @@ class CameraSetting extends React.Component<CameraSettingProps, CameraSettingSta
   }
 }
 
-export default connect(({ camera }: ConnectState) => ({
-  camera,
+export default connect(({ camerasetting }: ConnectState) => ({
+  camerasetting,
 }))(CameraSetting);
